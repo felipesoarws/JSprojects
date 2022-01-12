@@ -1,2 +1,2 @@
 # JSprojects
-my little JavaScript projects 
+my JavaScript projects 
