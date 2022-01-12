@@ -1,0 +1,234 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  list-style: none;
+  text-decoration: none;
+  font-family: "Spartan", sans-serif;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+body {
+  background: silver;
+}
+
+@media screen and (min-width: 768px) {
+  body {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    min-height: 100vh;
+  }
+}
+
+body .container {
+  margin: 4rem 2rem;
+  text-align: center;
+}
+
+body .container .sm {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 1rem;
+  margin: 1rem 0;
+}
+
+body .container .sm .github i {
+  color: black;
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+  cursor: pointer;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+body .container .sm .github i:hover {
+  color: #ff4665;
+}
+
+body .container .sm p {
+  margin: 0.2rem 0;
+}
+
+body .container h1 {
+  text-transform: uppercase;
+  color: black;
+  margin: 1rem 0;
+  font-size: 1rem;
+  font-style: italic;
+}
+
+body .container p {
+  color: black;
+  font-weight: 700;
+  font-size: 0.8rem;
+  margin: 1rem 0;
+}
+
+body .container p a {
+  color: #a0a0a0;
+  font-weight: 700;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  margin: 0 0.2rem;
+}
+
+body .container p a:hover {
+  color: #ff4665;
+}
+
+body .container .calc {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+body .container .calc .top {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+body .container .calc .top input,
+body .container .calc .top button {
+  border: 0;
+  padding: 0.8rem;
+  outline: 0;
+  width: 100%;
+}
+
+body .container .calc .top .input {
+  position: relative;
+}
+
+body .container .calc .top .input input {
+  padding-top: 1rem;
+}
+
+body .container .calc .top .input input:focus ~ span,
+body .container .calc .top .input input:valid ~ span {
+  -webkit-transform: translateY(-0.6rem);
+          transform: translateY(-0.6rem);
+  font-size: 0.5rem;
+}
+
+body .container .calc .top .input span {
+  position: absolute;
+  display: block;
+  top: 0.95rem;
+  left: 0.75rem;
+  color: #a0a0a0;
+  font-size: 0.7rem;
+  pointer-events: none;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+body .container .calc .top .button button {
+  border: none;
+  display: block;
+  position: relative;
+  padding: 0.6em 1.4em;
+  font-size: 18px;
+  background: transparent;
+  cursor: pointer;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  overflow: hidden;
+  color: black;
+  z-index: 1;
+  font-family: inherit;
+  font-weight: 500;
+}
+
+body .container .calc .top .button button:hover {
+  color: white;
+}
+
+body .container .calc .top .button button:hover span::before {
+  -webkit-transform: translate(-50%, -50%) rotate(-90deg);
+          transform: translate(-50%, -50%) rotate(-90deg);
+  width: 100%;
+  background: #ff4665;
+}
+
+body .container .calc .top .button button:active span::before {
+  background: #ff4665;
+}
+
+body .container .calc .top .button button span {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: transparent;
+  z-index: -1;
+  border: 2px solid black;
+}
+
+body .container .calc .top .button button span::before {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 8%;
+  height: 500%;
+  background: var(--lightgray);
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%) rotate(-60deg);
+          transform: translate(-50%, -50%) rotate(-60deg);
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+body .container .calc .display {
+  background: white;
+  padding: 0.5rem;
+  margin: 0.5rem 0;
+  width: 100%;
+}
+
+@media screen and (min-width: 425px) {
+  body .container .calc .display {
+    width: 18.5rem;
+  }
+}
+/*# sourceMappingURL=main.css.map */

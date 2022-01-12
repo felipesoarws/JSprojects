@@ -1,0 +1,194 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+    font-family: "Spartan", sans-serif;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+body {
+    background: rgb(192, 192, 192);
+
+    @media screen and (min-width: 768px) {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 100vh;
+    }
+
+    .container {
+        margin: 4rem 2rem;
+        text-align: center;
+
+        .sm {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 1rem;
+            margin: 1rem 0;
+
+            .github {
+                i {
+                    color: black;
+                    transform: scale(1.1);
+                    cursor: pointer;
+                    transition: all 0.3s ease-in-out;
+
+                    &:hover {
+                        color: rgb(255, 70, 101);
+                    }
+                }
+            }
+
+            p {
+                margin: 0.2rem 0;
+            }
+        }
+
+        h1 {
+            text-transform: uppercase;
+            color: black;
+            margin: 1rem 0;
+            font-size: 1rem;
+            font-style: italic;
+        }
+
+        p {
+            color: black;
+            font-weight: 700;
+            font-size: 0.8rem;
+            margin: 1rem 0;
+
+            a {
+                color: rgb(160, 160, 160);
+                font-weight: 700;
+                transition: all 0.3s ease-in-out;
+                margin: 0 0.2rem;
+
+                &:hover {
+                    color: rgb(255, 70, 101);
+                }
+            }
+        }
+
+        .calc {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+
+            .top {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+
+                input,
+                button {
+                    border: 0;
+                    padding: 0.8rem;
+                    outline: 0;
+                    width: 100%;
+                }
+
+                .input {
+                    position: relative;
+
+                    input {
+                        padding-top: 1rem;
+                        &:focus ~ span,
+                        &:valid ~ span {
+                            transform: translateY(-0.6rem);
+                            font-size: 0.5rem;
+                        }
+                    }
+                    span {
+                        position: absolute;
+                        display: block;
+                        top: 0.95rem;
+                        left: 0.75rem;
+                        color: rgb(160, 160, 160);
+                        font-size: 0.7rem;
+                        pointer-events: none;
+                        transition: all 0.3s ease-in-out;
+                    }
+                }
+
+                .button {
+                    button {
+                        border: none;
+                        display: block;
+                        position: relative;
+                        padding: 0.6em 1.4em;
+                        font-size: 18px;
+                        background: transparent;
+                        cursor: pointer;
+                        user-select: none;
+                        overflow: hidden;
+                        color: black;
+                        z-index: 1;
+                        font-family: inherit;
+                        font-weight: 500;
+
+                        &:hover {
+                            color: white;
+
+                            span::before {
+                                transform: translate(-50%, -50%) rotate(-90deg);
+                                width: 100%;
+                                background: rgb(255, 70, 101);
+                            }
+                        }
+
+                        &:active {
+                            span::before {
+                                background: rgb(255, 70, 101);
+                            }
+                        }
+
+                        span {
+                            position: absolute;
+                            left: 0;
+                            top: 0;
+                            width: 100%;
+                            height: 100%;
+                            background: transparent;
+                            z-index: -1;
+                            border: 2px solid black;
+
+                            &::before {
+                                content: "";
+                                display: block;
+                                position: absolute;
+                                width: 8%;
+                                height: 500%;
+                                background: var(--lightgray);
+                                top: 50%;
+                                left: 50%;
+                                transform: translate(-50%, -50%) rotate(-60deg);
+                                transition: all 0.3s;
+                            }
+                        }
+                    }
+                }
+            }
+
+            .display {
+                background: white;
+                padding: 0.5rem;
+                margin: 0.5rem 0;
+                width: 100%;
+
+                @media screen and (min-width: 425px) {
+                    width: 18.5rem;
+                }
+            }
+        }
+    }
+}
