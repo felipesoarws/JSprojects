@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calcule seu IMC</title>
+
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="imc-header">
+        <h1>Calcule seu IMC</h1>
+        <p>
+          feito por
+          <a target="_blank" href="https://github.com/felipesoarws"
+            >@felipesoarws</a
+          >
+        </p>
+      </div>
+      <div class="imc-container">
+        <div class="calc">
+          <label
+            >Altura (cm):
+            <input type="number" id="altura" />
+          </label>
+
+          <label
+            >Peso (kg):
+            <input type="number" id="peso" />
+          </label>
+        </div>
+
+        <input type="submit" id="submit" value="CALCULAR" />
+        <div class="result">
+          <h2>Seu IMC é de: <span id="valorIMC"></span></h2>
+          <p>
+            Com esse IMC, você está classificado com:
+            <span id="classifcIMC"></span>
+          </p>
+        </div>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>

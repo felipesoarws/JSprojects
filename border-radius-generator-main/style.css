@@ -1,0 +1,189 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap');
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    resize: none;
+    outline: 0;
+    text-decoration: none;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    min-height: 100vh;
+    font-family: 'Josefin Sans', sans-serif;
+    gap: 1rem;
+    background: rgb(192, 192, 192);
+}
+
+
+
+.generator {
+    position: relative;
+}
+
+.title h1 {
+    color: rgb(0, 0, 0);
+    text-transform: lowercase;
+    letter-spacing: 2px;
+    font-style: italic;
+    margin: 0.2rem 0;
+}
+
+.title a {
+    color: rgb(160, 160, 160);
+    font-weight: 100;
+    transition: all .3s ease-in-out;
+}
+
+.title p {
+    text-align: center;
+}
+
+.title a:hover {
+    color: rgb(255, 70, 101);
+}
+
+input {
+    width: 100%;
+    display: block;
+    margin: 1rem 0;
+    font-size: 1rem;
+    border-radius: 1rem;
+    border: 2px solid #000000;
+    accent-color: rgb(0, 0, 0);
+}
+
+input[type=range] {
+    -webkit-appearance: none; 
+    background: transparent; 
+    cursor: move;
+}
+
+input#topRight {
+    transform: rotate(180deg);
+
+
+}
+input#bottomRight {
+    position: absolute;
+    left: 2rem;
+    width: 22.6rem;
+    transform: translate(9rem, 8rem) rotate(270deg);
+    z-index: 5;
+
+}
+
+input#topLeft {
+    position: absolute;
+    left: -21.2rem;
+    width: 22.6rem;
+    transform: translate(8rem, -15rem) rotate(90deg);
+
+}
+
+
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+
+
+.border-generator {
+    padding: 10rem;
+    background:  #ffffff;
+    box-shadow: 3px 3px 6px 1px rgba(0, 0, 0, 0.4);
+        
+}
+
+.input {
+    background: white;
+    padding: 1rem 2rem;
+    border-radius: 0.8rem;
+position: relative;
+}
+
+.input code {
+    font-size: 1rem;
+}
+
+.input .far {
+    cursor: pointer;
+    transition: all .3s ease-in-out;
+}
+
+.input .far:hover {
+    color: rgb(255, 70, 101);
+
+}
+
+.input button {
+    border: 0;
+    font-size: 1rem;
+    width: 1rem;
+    background: transparent;
+    margin-left: 1rem;
+
+}
+
+.alert {
+    background: rgb(0, 0, 0);
+    padding: 1rem;
+    color: whitesmoke;
+    position: absolute;
+    right: 0;
+    top: 0;
+    transform: translate(7rem, 0.2rem);
+    opacity: 0;
+    display: none;
+}
+.alert.show {
+    animation: display 2s ease-in-out forwards;
+    display: block;
+
+}
+@keyframes display {
+    0% {
+        opacity: 0;
+    }
+
+    50% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+.alert::before {
+    content: '';
+    border-top: 10px solid transparent;
+    border-left: 10px solid transparent;
+    border-bottom: 10px solid transparent;
+    border-right: 15px solid black;
+    position: absolute;
+    left: 0;
+    transform: translate(-1.5rem, -0.2rem);
+}
+
+.alert h2 {
+    font-size: 0.8rem;
+    text-transform: uppercase;
+}
+
+
+
+
+
+
+
+

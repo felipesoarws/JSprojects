@@ -1,0 +1,97 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Inter', sans-serif;
+    text-decoration: none;
+}
+body {
+    background-color: black;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    min-height: 97vh;
+    background: #36069c;
+
+}
+
+input, button {
+    width: 100%;
+    padding: 1.2rem;
+    border-radius: 1.2rem;
+    box-shadow: 0 0 4px 2px rgba(0, 0, 0, 0.4);
+    border: 0;
+    outline: 0;
+    margin:  0.4rem 0;
+    font-size: 1.1rem;
+}
+
+input:focus {
+    background: rgb(255, 177, 251);
+}
+
+ button {
+    text-transform: uppercase;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.8rem;
+    transition: all .3s ease-in-out;
+}
+
+
+button:hover {
+    background: rgb(255, 177, 251);
+}
+
+
+.grid {
+    display: grid;
+    grid-template-columns: 62% 33%;
+    grid-template-rows: 1fr 2fr;
+    column-gap: 1rem;
+}
+
+.grid label {
+    grid-row:  1 / -1;
+    grid-column:  1 / -1;
+}
+
+
+
+label {
+    padding-left: 0.3rem;
+    display: block;
+}
+
+
+.b2d {
+    background: linear-gradient(45deg, #36069c,#5321ac);  
+    padding: 1rem;
+    border-radius: 0.5rem;
+    width: 21rem;
+    box-shadow: 1px 2px 2px 2px rgba(0, 0, 0, 0.4);
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+
+.title a {
+    color: rgb(245, 158, 158);
+    font-weight: 100;
+    transition: all .3s ease-in-out;
+}
+
+
+.title a:hover {
+    color: rgb(255, 70, 101);
+}
+

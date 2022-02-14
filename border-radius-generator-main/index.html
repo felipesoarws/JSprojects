@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+    <link rel="shortcut icon" href="icon.png"> 
+    <title>Border Radius Generator</title>
+</head>
+<body>
+    <div class="title">
+        <h1>Border Radius Generator</h1>
+        <p>made by <a target="_blank" href="https://github.com/felipesoarws">@felipesoarws</a></p>
+    </div>
+    <div class="generator">
+        <input type="range" min="0" value="0" max="50" name="" id="topRight">
+        <input type="range" min="0" value="0" max="50" name="" id="bottomRight">
+      
+        <div class="content">
+            <div class="border-generator">
+            </div>
+        </div>
+
+        <input type="range" min="0" value="0" max="50" name="" id="bottomLeft">
+        <input type="range" min="0" value="0" max="50" name="" id="topLeft">
+
+
+
+    </div>
+    <div class="input">
+        <code id="copyCode">border-radius: <span id="valueTL">0% </span><span id="valueTR">0% </span><span id="valueBR">0% </span><span id="valueBL">0%; </span><button id="copy" ><i class="far fa-copy"></i></button>
+        </code>
+
+        <div class="alert">
+            <h2>Copied!</h2>
+        </div>
+    </div>
+    
+
+    
+
+
+    <script src="script.js"></script>
+</body>
+</html>
