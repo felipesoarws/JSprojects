@@ -1,0 +1,132 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Inter", sans-serif;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  transition: all 0.3s ease-in-out;
+  justify-content: center;
+  background-color: white;
+}
+
+.slide {
+  text-align: center;
+  margin: 2rem 0;
+  width: 20rem;
+  transition: all 0.3s ease-in-out;
+}
+
+.slide p {
+  font-size: 0.9rem;
+  margin: 1rem 0;
+}
+
+.slide img {
+  width: 20rem;
+  height: 20rem;
+  object-fit: cover;
+  filter: grayscale(100%);
+  border-radius: 2%;
+}
+
+.prev,
+.next {
+  margin: 0 4rem;
+  padding: 1rem;
+}
+
+i {
+  transition: all 0.3s ease-in-out;
+  color: black;
+  transform: scale(3);
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+}
+
+i:hover {
+  transform: scale(3.4);
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.theme {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+label {
+  margin: 1rem 1.5rem 1rem 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+label span {
+  display: inline-block;
+  width: 60px;
+  height: 30px;
+  transition: all 0.3s ease-in-out;
+  background: black;
+  border-radius: 15px;
+}
+
+label input {
+  visibility: hidden;
+}
+
+label span::before {
+  content: "";
+  display: block;
+  transition: all 0.3s ease-in-out;
+  background-color: #eee;
+  width: 20px;
+  height: 20px;
+  border-radius: 10px;
+  margin: 5px;
+  transition: all 0.3s ease-in-out;
+}
+
+label input:checked + span::before {
+  transform: translateX(30px);
+  transition: all 0.3s ease-in-out;
+  background-color: black;
+}
+
+label input:checked + span {
+  transition: all 0.3s ease-in-out;
+  background: white;
+}
+
+body.dark {
+  transition: all 0.3s ease-in-out;
+  background-color: black;
+}
+
+body.dark label {
+  transition: all 0.3s ease-in-out;
+  color: white;
+}
+
+body.dark i {
+  color: white;
+  transition: all 0.3s ease-in-out;
+}
+body.dark p {
+  transition: all 0.3s ease-in-out;
+  color: white;
+}
+body.dark h1 {
+  transition: all 0.3s ease-in-out;
+  color: white;
+}

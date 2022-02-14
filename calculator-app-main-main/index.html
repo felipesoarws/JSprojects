@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="style.css" />
+
+    <title>Frontend Mentor | Calculator app</title>
+
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <style>
+      .attribution {
+        font-size: 11px;
+        text-align: center;
+      }
+      .attribution a {
+        color: hsl(172, 100%, 51%);
+      }
+    </style>
+  </head>
+  <body class="main">
+    <div class="container">
+      <div class="top">
+        <div class="content">
+          <h1>calc</h1>
+          <div class="second-content">
+            <h3>theme</h3>
+            <div class="third-content">
+              <div class="value">
+                <small>1</small>
+                <small>2</small>
+                <small>3</small>
+              </div>
+              <input type="range" id="slider" min="0" max="2" value="0" />
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="display">
+        <button id="display"></button>
+      </div>
+      <div class="keyboard">
+        <button id="tecla7">7</button>
+        <button id="tecla8">8</button>
+        <button id="tecla9">9</button>
+        <button id="backspace">DEL</button>
+        <button id="tecla4">4</button>
+        <button id="tecla5">5</button>
+        <button id="tecla6">6</button>
+        <button id="operacaoSomar">+</button>
+        <button id="tecla1">1</button>
+        <button id="tecla2">2</button>
+        <button id="tecla3">3</button>
+        <button id="operacaoSubtrair">-</button>
+        <button id="decimal">.</button>
+        <button id="tecla0">0</button>
+        <button id="operacaoDivir">/</button>
+        <button id="operacaoMultiplicar">x</button>
+        <button id="limparDisplay" class="resetar">RESET</button>
+        <button id="igual" class="igual">=</button>
+      </div>
+    </div>
+    <div class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+        >Frontend Mentor</a
+      >. Coded by
+      <a target="_blank" href="https://github.com/felipesoarws">felipesoarws</a
+      >.
+    </div>
+
+    <script src="calculadora.js"></script>
+    <script src="temas.js"></script>
+  </body>
+</html>
