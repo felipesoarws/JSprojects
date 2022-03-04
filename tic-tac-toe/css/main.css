@@ -1,0 +1,197 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  list-style-type: none;
+  font-family: "Manrope", sans-serif;
+  text-decoration: none;
+}
+
+body {
+  background: linear-gradient(45deg, #522a52, #5a189a, #2a4b80);
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+body header {
+  margin-bottom: 4rem;
+}
+
+body header .title {
+  color: white;
+  text-align: center;
+}
+
+body header .title h2 {
+  font-size: 2rem;
+}
+
+body header .sm {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 1rem;
+}
+
+body header .sm a {
+  color: white;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  font-size: 1.6rem;
+}
+
+body header .sm a:hover {
+  color: #d83dff;
+}
+
+body .board {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[3];
+      grid-template-columns: repeat(3, 1fr);
+  /* X */
+  /* o */
+}
+
+body .board .cell.x::before,
+body .board .cell.x::after,
+body .board.x .cell:not(.x):not(.o):hover::after,
+body .board.x .cell:not(.x):not(.o):hover::before {
+  content: "";
+  height: calc(6.25rem * 0.15);
+  width: calc(6.25rem * 0.9);
+  background: white;
+  position: absolute;
+}
+
+body .board .cell.x::before,
+body .board.x .cell:hover::before {
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+
+body .board .cell.x::after,
+body .board.x .cell:hover::after {
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+}
+
+body .board.x .cell:not(.x):not(.o):hover::after,
+body .board.x .cell:not(.x):not(.o):hover::before {
+  opacity: 0.5;
+}
+
+body .board .cell.o::before,
+body .board .cell.o::after,
+body .board.o .cell:not(.x):not(.o):hover::after,
+body .board.o .cell:not(.x):not(.o):hover::before {
+  content: "";
+  height: calc(6.25rem * 0.8);
+  width: calc(6.25rem * 0.8);
+  background: white;
+  position: absolute;
+  border-radius: 50%;
+}
+
+body .board.o .cell:not(.x):not(.o):hover::after,
+body .board.o .cell:not(.x):not(.o):hover::before {
+  opacity: 0.5;
+}
+
+body .board .cell {
+  height: 6.25rem;
+  width: 6.25rem;
+  border: 1.7px solid white;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+body .board .cell.x, body .board .cell.o {
+  cursor: not-allowed;
+}
+
+body .board .cell:nth-child(1), body .board .cell:nth-child(2), body .board .cell:nth-child(3) {
+  border-top: none;
+}
+
+body .board .cell:nth-child(1), body .board .cell:nth-child(4), body .board .cell:nth-child(7) {
+  border-left: none;
+}
+
+body .board .cell:nth-child(3), body .board .cell:nth-child(6), body .board .cell:nth-child(9) {
+  border-right: none;
+}
+
+body .board .cell:nth-child(7), body .board .cell:nth-child(8), body .board .cell:nth-child(9) {
+  border-bottom: none;
+}
+
+body .winning-message {
+  display: none;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  position: absolute;
+  height: 100vh;
+  width: 100vw;
+  text-align: center;
+  background: rgba(0, 0, 0, 0.9);
+}
+
+body .winning-message p {
+  font-size: 5rem;
+  color: white;
+  font-weight: 700;
+}
+
+body .winning-message button {
+  font-size: 1.5rem;
+  font-weight: 700;
+  padding: 0.8rem 1rem;
+  border-radius: 0.7rem;
+  border: 0;
+  background-color: #5a189a;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+body .winning-message button:hover {
+  background-color: #9853dd;
+  color: white;
+  cursor: pointer;
+}
+/*# sourceMappingURL=main.css.map */
