@@ -1,4 +1,4 @@
-# TIC TAC TOE
+# TO DO LIST
 
 A To Do List made with HTML, SCSS and Vanilla JavaScript!
 
